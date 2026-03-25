@@ -4,6 +4,8 @@ A real-time N-body gravity simulation running entirely on the GPU via WebGPU com
 
 **[Try it live](https://victorantos.github.io/GravitySimulation/)**
 
+![N-Body Gravity Simulation](screenshots/og-image.png)
+
 ## Features
 
 - GPU-accelerated N-body physics via WebGPU compute shaders
@@ -118,6 +120,22 @@ This project is designed to port almost line-for-line to CUDA. Here's what it wo
 ### Reference
 
 NVIDIA's official CUDA N-Body sample uses the exact same shared memory tiling algorithm: [CUDA Samples — nbody](https://github.com/NVIDIA/cuda-samples/tree/master/Samples/5_Domain_Specific/nbody)
+
+## Tests
+
+Run the test suite with Node.js (no dependencies required):
+
+```bash
+npm test
+```
+
+Or directly:
+
+```bash
+node --test tests/*.test.js
+```
+
+37 tests covering initial conditions (galaxy spiral, random cloud, two galaxies), uniform buffer encoding, double buffer alternation, workgroup dispatch, and spawn clamping.
 
 ## Author
 
