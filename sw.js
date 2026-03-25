@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gravity-sim-v1';
+const CACHE_NAME = 'gravity-sim-__GIT_HASH__';
 
 const STATIC_ASSETS = [
   './',
