@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#aaccff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#4488ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4488ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbit-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6699ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#6699ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="url(#bg)"/>
+  <!-- Subtle stars -->
+  <circle cx="80" cy="90" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="420" cy="70" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="60" cy="380" r="1.2" fill="#ffffff" opacity="0.4"/>
+  <circle cx="450" cy="420" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="130" cy="450" r="1.5" fill="#ffffff" opacity="0.3"/>
+  <circle cx="380" cy="140" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="100" cy="220" r="0.8" fill="#ffffff" opacity="0.4"/>
+  <circle cx="400" cy="300" r="1.2" fill="#ffffff" opacity="0.3"/>
+  <!-- Orbital rings -->
+  <ellipse cx="256" cy="256" rx="120" ry="45" fill="none" stroke="#4488ff" stroke-width="1.5" opacity="0.25" transform="rotate(-20,256,256)"/>
+  <ellipse cx="256" cy="256" rx="170" ry="60" fill="none" stroke="#6699ff" stroke-width="1" opacity="0.15" transform="rotate(15,256,256)"/>
+  <ellipse cx="256" cy="256" rx="80" ry="30" fill="none" stroke="#88aaff" stroke-width="1" opacity="0.2" transform="rotate(-45,256,256)"/>
+  <!-- Central star glow -->
+  <circle cx="256" cy="256" r="80" fill="url(#glow)"/>
+  <!-- Central star core -->
+  <circle cx="256" cy="256" r="18" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="12" fill="#ddeeff"/>
+  <!-- Orbiting particles -->
+  <circle cx="160" cy="220" r="6" fill="#ff8844" opacity="0.9"/>
+  <circle cx="160" cy="220" r="10" fill="#ff8844" opacity="0.2"/>
+  <circle cx="340" cy="205" r="5" fill="#44ccff" opacity="0.9"/>
+  <circle cx="340" cy="205" r="8" fill="#44ccff" opacity="0.2"/>
+  <circle cx="310" cy="330" r="4" fill="#88ff88" opacity="0.8"/>
+  <circle cx="310" cy="330" r="7" fill="#88ff88" opacity="0.15"/>
+  <circle cx="195" cy="310" r="3.5" fill="#ffaa44" opacity="0.8"/>
+  <circle cx="195" cy="310" r="6" fill="#ffaa44" opacity="0.15"/>
+  <circle cx="370" cy="275" r="3" fill="#ff6688" opacity="0.7"/>
+</svg>

@@ -14,6 +14,13 @@
     <meta name="twitter:title" content="N-Body Gravity Simulation — WebGPU">
     <meta name="twitter:description" content="Thousands of particles interacting gravitationally in real-time, powered by GPU compute shaders in your browser.">
     <meta name="twitter:image" content="https://victorantos.github.io/GravitySimulation/screenshots/og-image.png">
+    <!-- PWA -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gravity">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -81,5 +88,10 @@
     </div>
 
     <script type="module" src="js/main.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+    </script>
 </body>
 </html>
