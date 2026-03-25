@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Body Gravity Simulation — WebGPU</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="error-overlay"></div>
+
+    <div id="stats">
+        <div id="fps">-- FPS</div>
+        <div id="particle-count">-- particles</div>
+    </div>
+
+    <div id="controls">
+        <h2>N-Body Simulation</h2>
+
+        <div class="control-group">
+            <label>Gravity (G) <span id="gravity-val"></span></label>
+            <input type="range" id="gravity" min="-2" max="1.5" step="0.01" value="0">
+        </div>
+
+        <div class="control-group">
+            <label>Softening <span id="softening-val"></span></label>
+            <input type="range" id="softening" min="0.1" max="100" step="0.1" value="10">
+        </div>
+
+        <div class="control-group">
+            <label>Damping <span id="damping-val"></span></label>
+            <input type="range" id="damping" min="0.99" max="1.0" step="0.0001" value="0.9995">
+        </div>
+
+        <div class="control-group">
+            <label>Timestep <span id="timestep-val"></span></label>
+            <input type="range" id="timestep" min="0.001" max="0.05" step="0.001" value="0.016">
+        </div>
+
+        <div class="control-group">
+            <label>Particle Size <span id="particle-size-val"></span></label>
+            <input type="range" id="particle-size" min="0.001" max="0.015" step="0.001" value="0.004">
+        </div>
+
+        <div class="control-group">
+            <label>Trail Fade <span id="trail-val"></span></label>
+            <input type="range" id="trail" min="0" max="0.2" step="0.005" value="0.05">
+        </div>
+
+        <div class="control-group">
+            <label>Preset</label>
+            <select id="preset">
+                <option value="galaxySpiral">Galaxy Spiral</option>
+                <option value="randomCloud">Random Cloud</option>
+                <option value="twoGalaxies">Two Galaxies</option>
+            </select>
+        </div>
+
+        <div class="btn-row">
+            <button id="pause-btn">Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <div class="help-text">
+            Click to spawn particles<br>
+            Drag to fling with velocity<br>
+            Right-click + hold to attract
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
